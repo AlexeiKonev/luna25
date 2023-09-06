@@ -14,7 +14,11 @@ public class LevelSelectMenu : MonoBehaviour
         var ActiveScenename = SceneManager.GetActiveScene().name;
         var y = int.Parse(ActiveScenename);
         var z = y + 1;
-       var levelName = z.ToString();
+        var levelName = z.ToString();
         SceneManager.LoadScene(levelName);
+    }
+    public void ReLoadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
